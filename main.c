@@ -10,7 +10,7 @@ int main(){
     //Inserção na tabela hash das palavras.
     for(int i = 0; i < quantPalavras; i++){
         int valor; 
-        char *palavra = (char *) malloc(30 * sizeof(char)); 
+        char *palavra = (char *) malloc(40 * sizeof(char)); 
         scanf("%s %d", palavra, &valor);
         insere(HT, palavra, valor);
         free(palavra);
@@ -21,7 +21,7 @@ int main(){
         int fim = 0;
         //Loop lê cada palavra e faz a busca dentro da hash.    
         while(!fim){
-            char *str = (char *) malloc(30 * sizeof(char));
+            char *str = (char *) malloc(40 * sizeof(char));
             scanf("%s", str);
             if(str[0] != '.'){
                 int cont = busca(HT, str);
